@@ -1,4 +1,4 @@
-param($ProductName = 'Code Modern Explorer Menu', $Variant = 'stable', $Platform = 'x64', $Version = '1.0.0')
+param($ProductName = 'Trae Modern Explorer Menu', $Variant = 'stable', $Platform = 'x64', $Version = '1.0.0')
 
 Import-Module PSMSI
 
@@ -10,13 +10,13 @@ if (Test-Path $OutputDirectory) {
     Get-ChildItem -Path $OutputDirectory | ForEach-Object { Remove-Item -Path $_ -Force -Recurse  }
 }
 
-$ProductId = 'a434e5cf-1a39-49a1-b956-362c95aa85df'
-$UpgradeCode = '6b06a391-688d-4b09-961c-9a655292bc05'
+$ProductId = 'F36C31D8-B5D4-492B-B766-CDB73D3C68D4'
+$UpgradeCode = 'D59C3F6E-2468-46FD-9044-36A3731223B2'
 
 if ($Variant -eq 'insiders') {
-    $ProductName = 'Code Insiders Modern Explorer Menu'
-    $ProductId = 'd634ca99-9829-44e2-a4bb-48f9e726fa3b'
-    $UpgradeCode = '41d8bac9-bea2-457b-ac00-8c296b1d8e1b'
+    $ProductName = 'Trae Insiders Modern Explorer Menu'
+    $ProductId = '0DCF9DDB-F0D7-42B2-ACCB-92407353C706'
+    $UpgradeCode = 'F62062DB-AD16-4344-BB3C-779A49166025'
 }
 
 $CustomAction = @(

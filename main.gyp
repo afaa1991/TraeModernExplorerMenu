@@ -52,11 +52,11 @@
     ],
   },
   'targets': [{
-    'target_name': 'Code Modern Explorer Menu',
+    'target_name': 'Trae Modern Explorer Menu',
     'type': 'shared_library',
     'defines': [
-      'EXE_NAME="Code.exe"',
-      'DIR_NAME="Microsoft VS Code"',
+      'EXE_NAME="Trae CN.exe"',
+      'DIR_NAME="Trae CN"',
     ],
     'conditions': [
       [ 'OS=="win"', {
@@ -64,24 +64,24 @@
           ['target_arch=="x64"', {
             'TargetMachine' : 17,             # /MACHINE:X64
             'defines': [ 
-              'DLL_UUID="E4E4C322-3388-45AF-8D39-BE19BFC78A18"',
+              'DLL_UUID="01607B4B-B639-44B5-86B9-3E134C67632D"',
             ],
           }],
           ['target_arch=="arm64"', {
             'TargetMachine' : 18,             # /MACHINE:ARM64 https://learn.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.vcprojectengine.machinetypeoption?view=visualstudiosdk-2022
             'defines': [ 
-              'DLL_UUID="12483301-B459-40BE-A434-DF8010E8958F"',
+              'DLL_UUID="D905884C-EE96-4BC2-9771-9ABFFC4E214B"',
             ],
           }],
         ],
       }],
     ],
   }, {
-    'target_name': 'Code Insiders Modern Explorer Menu',
+    'target_name': 'Trae Insiders Modern Explorer Menu',
     'type': 'shared_library',
     'defines': [
-      'EXE_NAME="Code - Insiders.exe"',
-      'DIR_NAME="Microsoft VS Code Insiders"',
+      'EXE_NAME="Trae - Insiders.exe"',
+      'DIR_NAME="Trae CN Insiders"',
       'INSIDER=1',
     ],
     'conditions': [
@@ -90,13 +90,13 @@
           ['target_arch=="x64"', {
             'TargetMachine' : 17,             # /MACHINE:X64
             'defines': [ 
-              'DLL_UUID="799F4F7E-5934-4001-A74C-E207F44F05B8"',
+              'DLL_UUID="7A2FA6D0-4E71-4211-8FA9-F4C7600936B3"',
             ],
           }],
           ['target_arch=="arm64"', {
             'TargetMachine' : 18,             # /MACHINE:ARM64
             'defines': [ 
-              'DLL_UUID="7D34756D-32DD-4EE6-B99F-2691C0DAD875"',
+              'DLL_UUID="0D8C9915-F368-4610-BBC7-B29A66DA13B1"',
             ],
           }],
         ],

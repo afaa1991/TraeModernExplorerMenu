@@ -25,12 +25,12 @@ python3 .\scripts\generate_pkg.py stable x64 .\template\AppxManifest.xml
 
 Set-Location out
 
-& "$makeappx" pack /d "stable_explorer_pkg_x64" /p "Code Modern Explorer Menu x64.appx" /nv
+& "$makeappx" pack /d "stable_explorer_pkg_x64" /p "Trae Modern Explorer Menu x64.appx" /nv
 
 Set-Location out
 
-Copy-Item -LiteralPath "Default\Code Modern Explorer Menu.dll" -Destination "..\out"
+Copy-Item -LiteralPath "Default\Trae Modern Explorer Menu.dll" -Destination "..\out"
 
 $Version = 1.0.0
 
-run: .\build-msi.ps1 -ProductName "Code Modern Explorer Menu" -Variant stable -Platform x64 -Version $Version
+run: .\build-msi.ps1 -ProductName "Trae Modern Explorer Menu" -Variant stable -Platform x64 -Version $Version

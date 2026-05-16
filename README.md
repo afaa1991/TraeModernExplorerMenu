@@ -1,3 +1,5 @@
+# 为Trae CN 添加Windows 11 Modern Explorer菜单
+
 # Code Modern Explorer Menu
 An MSI package that adds the Windows 11 Modern Explorer menu for Microsoft Visual Studio Code.
   

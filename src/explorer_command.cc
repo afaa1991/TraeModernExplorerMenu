@@ -101,9 +101,9 @@ class __declspec(uuid(DLL_UUID)) ExplorerCommandHandler final : public RuntimeCl
     wchar_t expanded_value_w[kMaxStringLength];
     DWORD value_size_w = sizeof(value_w);
     #if defined(INSIDER)
-        const wchar_t kTitleRegkey[] = L"Software\\Classes\\CodeInsidersModernExplorerMenu";
+        const wchar_t kTitleRegkey[] = L"Software\\Classes\\TraeInsidersModernExplorerMenu";
     #else
-        const wchar_t kTitleRegkey[] = L"Software\\Classes\\CodeModernExplorerMenu";
+        const wchar_t kTitleRegkey[] = L"Software\\Classes\\TraeModernExplorerMenu";
     #endif
     HKEY subhkey = nullptr;
     LONG result = RegOpenKeyEx(HKEY_LOCAL_MACHINE, kTitleRegkey, 0, KEY_READ, &subhkey);
@@ -127,7 +127,7 @@ class __declspec(uuid(DLL_UUID)) ExplorerCommandHandler final : public RuntimeCl
     module_path = module_path / DIR_NAME / EXE_NAME;
 
     if (!std::filesystem::exists(module_path)) {
-        std::filesystem::path fallback_path = std::filesystem::path("C:\\Program Files") / DIR_NAME / EXE_NAME;
+        std::filesystem::path fallback_path = std::filesystem::path("D:\\AppData") / DIR_NAME / EXE_NAME;
         if (std::filesystem::exists(fallback_path)) {
             module_path = fallback_path;
         } else {
@@ -183,7 +183,7 @@ class __declspec(uuid(DLL_UUID)) ExplorerCommandHandler final : public RuntimeCl
           module_path = module_path / DIR_NAME / EXE_NAME;
 
           if (!std::filesystem::exists(module_path)) {
-            std::filesystem::path fallback_path = std::filesystem::path("C:\\Program Files") / DIR_NAME / EXE_NAME;
+            std::filesystem::path fallback_path = std::filesystem::path("D:\\AppData") / DIR_NAME / EXE_NAME;
             if (std::filesystem::exists(fallback_path)) {
                 module_path = fallback_path;
             } else {
